@@ -7,24 +7,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styleone.css">
 
 </head>
 
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
+    <div id="home">
+        <div id="particles-js"></div>
+        <div class="content">
+            <img class="imgedit" src="https://img.imageupload.net/2020/09/24/New-Project.png" alt="">
+            <p>Your Name</p>
+            <a class="right" href="#">Social</a>
+            <a class="left right" href="#">Social</a>
 
-        <p>Your Name</p>
-        <a class="right" href="#">Social</a>
-        <a class="left" href="#">Social</a>
+            <a class="left go" onclick="smoothScroll(document.getElementById('about'))" href="#about">About</a>
+        </div>
+        </section>
+        <div id="about">
+            <p class="abouttitle">About</p>
+            <p class="abouttext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in varius nibh. Nullam semper sapien non dui faucibus molestie. Quisque cursus nisl quis nisi fringilla, sit amet vulputate turpis sollicitudin. Vivamus volutpat nisl nibh. Ut consectetur ligula
+                in risus sodales vehicula. Cras at fermentum eros, eget egestas risus. Fusce consequat vel tortor at consectetur. Praesent quis metus sit amet tellus consequat iaculis vel imperdiet orci. Nam dapibus risus dolor, at iaculis massa aliquam
+                a. Nunc quis sodales mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin et blandit dolor, et laoreet justo. In leo magna, eleifend sed ante eu, tristique bibendum dolor. Aenean tempor
+                ultricies viverra. Nam tincidunt odio eget blandit tincidunt. Duis quis lacus ultricies, ullamcorper libero quis, finibus ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vel gravida nulla, sagittis cursus diam.
+                Nullam accumsan ornare sem, id scelerisque est placerat a. Integer ex nulla, vehicula mattis ligula quis, sollicitudin sollicitudin massa. Nulla elementum id neque et aliquet. In pharetra pretium lorem, ut convallis eros sollicitudin quis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam pellentesque, orci nec ultrices mattis, quam enim malesuada.
+            </p>
+            <script src=“https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js”></script>
+            <script>
+                window.smoothScroll = function(target) {
+                    var scrollContainer = target;
+                    do {
+                        scrollContainer = scrollContainer.parentNode;
+                        if (!scrollContainer) return;
+                        scrollContainer.scrollTop += 1;
+                    } while (scrollContainer.scrollTop == 0);
 
-    </div>
-    <!-- particles.js container -->
+                    var targetY = 0;
+                    do {
+                        if (target == scrollContainer) break;
+                        targetY += target.offsetTop;
+                    } while (target = target.offsetParent);
+
+                    scroll = function(c, a, b, i) {
+                        i++;
+                        if (i > 30) return;
+                        c.scrollTop = a + (b - a) / 30 * i;
+                        setTimeout(function() {
+                            scroll(c, a, b, i);
+                        }, 20);
+                    }
+
+                    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+                }
+            </script>
 
 
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
+
+            <script src="js/particles.js"></script>
+            <script src="js/app.js"></script>
 
 
 
