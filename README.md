@@ -1,6 +1,6 @@
 # Personal Website Template
 
-<img src="https://www.imageupload.net/image/personaltemplate.EVVRs" style="float=center"></img>
+<img src="https://www.imageupload.net/image/personaltemplate.EVVRs"></img>
 
 You can use the template by changing the name and social media buttons.
 
